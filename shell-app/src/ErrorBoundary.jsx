@@ -24,6 +24,10 @@ class ErrorBoundary extends React.Component {
     return { hasError: true };
   }
 
+  componentDidCatch(error, info) {
+    console.error('Remote module failed to load:', error, info);
+  }
+
   render() {
     if (this.state.hasError) {
       return (

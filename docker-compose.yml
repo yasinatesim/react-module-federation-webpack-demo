@@ -13,6 +13,8 @@ services:
     build:
       context: ./shell-app
       args:
+        # localhost:3001 is correct here — this URL is embedded in the browser bundle,
+        # so it must be resolvable from the user's browser, not the Docker network.
         PRODUCTS_APP_URL: http://localhost:3001
     ports:
       - "3000:80"

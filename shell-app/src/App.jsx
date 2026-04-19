@@ -136,7 +136,6 @@ const styles = {
 function LoadingFallback() {
   return (
     <div style={styles.loadingWrapper}>
-      <style>{`@keyframes spin { to { transform: rotate(360deg); } }`}</style>
       <div style={styles.spinner} />
       <span>remote yükleniyor...</span>
     </div>

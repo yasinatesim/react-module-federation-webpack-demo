@@ -4,7 +4,7 @@ const { ModuleFederationPlugin } = require('@module-federation/enhanced/webpack'
 const PRODUCTS_APP_URL = process.env.PRODUCTS_APP_URL || 'http://localhost:3001';
 
 module.exports = {
-  mode: 'development',
+  mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
   entry: './src/index.js',
   devServer: {
     port: 3000,

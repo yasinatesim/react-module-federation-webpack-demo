@@ -13,7 +13,17 @@ describe('App', () => {
     expect(screen.getByText(/module federation/i)).toBeInTheDocument();
   });
 
-  it('renders Suspense with loading fallback available', () => {
+  it('renders the subtitle description', () => {
+    render(<App />);
+    expect(screen.getByText(/lazy-load/i)).toBeInTheDocument();
+  });
+
+  it('renders the card label showing remote module path', () => {
+    render(<App />);
+    expect(screen.getByText('products_app/ProductList')).toBeInTheDocument();
+  });
+
+  it('renders the federated ProductList mock', () => {
     render(<App />);
     expect(screen.getByTestId('product-list-mock')).toBeInTheDocument();
   });
