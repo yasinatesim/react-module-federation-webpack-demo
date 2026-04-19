@@ -1,0 +1,26 @@
+version: '3.8'
+
+services:
+  products-app:
+    build:
+      context: ./products-app
+    ports:
+      - "3001:80"
+    networks:
+      - mf-network
+
+  shell-app:
+    build:
+      context: ./shell-app
+      args:
+        PRODUCTS_APP_URL: http://localhost:3001
+    ports:
+      - "3000:80"
+    depends_on:
+      - products-app
+    networks:
+      - mf-network
+
+networks:
+  mf-network:
+    driver: bridge

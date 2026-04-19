@@ -6,7 +6,10 @@
     "install:all": "npm install --prefix shell-app && npm install --prefix products-app",
     "start": "concurrently \"npm run start:shell\" \"npm run start:products\"",
     "start:shell": "npm start --prefix shell-app",
-    "start:products": "npm start --prefix products-app"
+    "start:products": "npm start --prefix products-app",
+    "docker:build": "docker-compose build",
+    "docker:up": "docker-compose up",
+    "docker:down": "docker-compose down"
   },
   "devDependencies": {
     "concurrently": "^8.0.0"
