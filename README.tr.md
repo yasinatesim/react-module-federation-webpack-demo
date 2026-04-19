@@ -67,39 +67,13 @@ Tarayıcıda `http://localhost:3000` adresini aç.
 npm run docker:down
 ```
 
-## Netlify'a Deploy
+## Canlı Demo
 
-Her uygulamayı aynı repodan ayrı birer Netlify sitesi olarak deploy et.
-
-### 1. Önce products-app'i deploy et
-
-Netlify → **New site from Git** → bu repoyu seç:
-
-| Ayar | Değer |
+| Uygulama | URL |
 |---|---|
-| Base directory | `products-app` |
-| Build komutu | `npm run build` |
-| Publish dizini | `products-app/dist` |
-
-Netlify site adı: `react-module-federation-wp-products`
-
-Canlı URL'ler:
-- [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app)
-- [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com)
-
-### 2. shell-app'i deploy et
-
-Netlify → **New site from Git** → bu repoyu seç:
-
-| Ayar | Değer |
-|---|---|
-| Base directory | `shell-app` |
-| Build komutu | `npm run build` |
-| Publish dizini | `shell-app/dist` |
-
-Canlı URL: [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com)
-
-shell-app, production'da `ProductList`'i `https://react-module-federation-wp-products.yasinates.com` adresinden çekecek şekilde yapılandırılmıştır — environment variable girmen gerekmez.
+| shell-app (host) | [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com) |
+| products-app (remote) | [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app) |
+| products-app (remote) | [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com) |
 
 ## Testler
 

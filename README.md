@@ -67,39 +67,13 @@ Open `http://localhost:3000`
 npm run docker:down
 ```
 
-## Deploy to Netlify
+## Live Demo
 
-Deploy each app as a separate Netlify site from the same repository.
-
-### 1. Deploy products-app first
-
-In Netlify → **New site from Git** → select this repo:
-
-| Setting | Value |
+| App | URL |
 |---|---|
-| Base directory | `products-app` |
-| Build command | `npm run build` |
-| Publish directory | `products-app/dist` |
-
-Netlify site name: `react-module-federation-wp-products`
-
-Live URLs:
-- [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app)
-- [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com)
-
-### 2. Deploy shell-app
-
-In Netlify → **New site from Git** → select this repo:
-
-| Setting | Value |
-|---|---|
-| Base directory | `shell-app` |
-| Build command | `npm run build` |
-| Publish directory | `shell-app/dist` |
-
-Live URL: [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com)
-
-The shell-app is pre-configured to fetch `ProductList` from `https://react-module-federation-wp-products.yasinates.com` in production — no environment variables needed.
+| shell-app (host) | [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com) |
+| products-app (remote) | [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app) |
+| products-app (remote) | [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com) |
 
 ## Tests
 
