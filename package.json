@@ -1,0 +1,14 @@
+{
+  "name": "react-module-federation-demo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install --prefix shell-app && npm install --prefix products-app",
+    "start": "concurrently \"npm run start:shell\" \"npm run start:products\"",
+    "start:shell": "npm start --prefix shell-app",
+    "start:products": "npm start --prefix products-app"
+  },
+  "devDependencies": {
+    "concurrently": "^8.0.0"
+  }
+}
