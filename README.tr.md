@@ -69,22 +69,31 @@ npm run docker:down
 
 ## Netlify'a Deploy
 
-Her uygulamayı ayrı bir Netlify sitesi olarak deploy et.
+Her uygulamayı aynı repodan ayrı birer Netlify sitesi olarak deploy et.
 
 ### 1. Önce products-app'i deploy et
 
-- Build komutu: `npm run build`
-- Publish dizini: `dist`
-- Base dizini: `products-app`
+Netlify → **New site from Git** → bu repoyu seç:
 
-Deploy edilen URL'yi not et (örn. `https://mf-products.netlify.app`).
+| Ayar | Değer |
+|---|---|
+| Base directory | `products-app` |
+| Build komutu | `npm run build` |
+| Publish dizini | `products-app/dist` |
+
+`react-mf-wp-product-app.yasinates.com` domainini bu siteye yönlendir.
 
 ### 2. shell-app'i deploy et
 
-- Build komutu: `npm run build`
-- Publish dizini: `dist`
-- Base dizini: `shell-app`
-- Environment variable: `PRODUCTS_APP_URL` = products-app URL'in (örn. `https://mf-products.netlify.app`)
+Netlify → **New site from Git** → bu repoyu seç:
+
+| Ayar | Değer |
+|---|---|
+| Base directory | `shell-app` |
+| Build komutu | `npm run build` |
+| Publish dizini | `shell-app/dist` |
+
+shell-app, production'da `ProductList`'i `https://react-mf-wp-product-app.yasinates.com` adresinden çekecek şekilde yapılandırılmıştır — environment variable girmen gerekmez.
 
 ## Testler
 

@@ -69,24 +69,31 @@ npm run docker:down
 
 ## Deploy to Netlify
 
-Deploy each app as a separate Netlify site.
+Deploy each app as a separate Netlify site from the same repository.
 
 ### 1. Deploy products-app first
 
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=YOUR_REPO_URL)
+In Netlify → **New site from Git** → select this repo:
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Base directory: `products-app`
+| Setting | Value |
+|---|---|
+| Base directory | `products-app` |
+| Build command | `npm run build` |
+| Publish directory | `products-app/dist` |
 
-Note the deployed URL (e.g. `https://mf-products.netlify.app`).
+Point your domain `react-mf-wp-product-app.yasinates.com` to this site.
 
 ### 2. Deploy shell-app
 
-- Build command: `npm run build`
-- Publish directory: `dist`
-- Base directory: `shell-app`
-- Environment variable: `PRODUCTS_APP_URL` = your products-app URL (e.g. `https://mf-products.netlify.app`)
+In Netlify → **New site from Git** → select this repo:
+
+| Setting | Value |
+|---|---|
+| Base directory | `shell-app` |
+| Build command | `npm run build` |
+| Publish directory | `shell-app/dist` |
+
+The shell-app is pre-configured to fetch `ProductList` from `https://react-mf-wp-product-app.yasinates.com` in production — no environment variables needed.
 
 ## Tests
 

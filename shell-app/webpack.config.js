@@ -1,7 +1,10 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { ModuleFederationPlugin } = require('@module-federation/enhanced/webpack');
 
-const PRODUCTS_APP_URL = process.env.PRODUCTS_APP_URL || 'http://localhost:3001';
+const PRODUCTS_APP_URL = process.env.PRODUCTS_APP_URL ||
+  (process.env.NODE_ENV === 'production'
+    ? 'https://react-mf-wp-product-app.yasinates.com'
+    : 'http://localhost:3001');
 
 module.exports = {
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',

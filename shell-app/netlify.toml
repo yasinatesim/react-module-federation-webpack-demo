@@ -3,10 +3,7 @@
   publish = "dist"
 
 [build.environment]
-  # Override this in Netlify site settings → Environment variables
-  # Set PRODUCTS_APP_URL to your deployed products-app URL
-  # e.g. https://mf-products.netlify.app
-  PRODUCTS_APP_URL = "http://localhost:3001"
+  NODE_ENV = "production"
 
 [[redirects]]
   from = "/*"
