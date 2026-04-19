@@ -72,7 +72,6 @@ npm run docker:down
 | Uygulama | URL |
 |---|---|
 | shell-app (host) | [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com) |
-| products-app (remote) | [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app) |
 | products-app (remote) | [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com) |
 
 ## Testler
