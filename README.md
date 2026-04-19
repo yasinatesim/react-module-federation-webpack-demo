@@ -67,6 +67,27 @@ Open `http://localhost:3000`
 npm run docker:down
 ```
 
+## Deploy to Netlify
+
+Deploy each app as a separate Netlify site.
+
+### 1. Deploy products-app first
+
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=YOUR_REPO_URL)
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Base directory: `products-app`
+
+Note the deployed URL (e.g. `https://mf-products.netlify.app`).
+
+### 2. Deploy shell-app
+
+- Build command: `npm run build`
+- Publish directory: `dist`
+- Base directory: `shell-app`
+- Environment variable: `PRODUCTS_APP_URL` = your products-app URL (e.g. `https://mf-products.netlify.app`)
+
 ## Tests
 
 ```bash
