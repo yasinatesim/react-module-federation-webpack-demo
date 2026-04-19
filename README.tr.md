@@ -104,7 +104,7 @@ npm test --prefix products-app
 
 ## Makale
 
-📖 [Makaleyi oku](ARTICLE_URL)
+📖 [Makaleyi oku](https://medium.com/p/6aa057f28d3c)
 
 ---
 

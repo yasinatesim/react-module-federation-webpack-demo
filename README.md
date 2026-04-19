@@ -104,7 +104,7 @@ npm test --prefix products-app
 
 ## Article
 
-📖 [Read the article](ARTICLE_URL)
+📖 [Read the article](https://medium.com/p/6aa057f28d3c)
 
 ---
 
