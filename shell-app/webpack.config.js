@@ -3,7 +3,7 @@ const { ModuleFederationPlugin } = require('@module-federation/enhanced/webpack'
 
 const PRODUCTS_APP_URL = process.env.PRODUCTS_APP_URL ||
   (process.env.NODE_ENV === 'production'
-    ? 'https://react-mf-wp-product-app.yasinates.com'
+    ? 'https://react-module-federation-wp-products.yasinates.com'
     : 'http://localhost:3001');
 
 module.exports = {

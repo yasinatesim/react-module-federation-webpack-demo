@@ -81,7 +81,11 @@ In Netlify → **New site from Git** → select this repo:
 | Build command | `npm run build` |
 | Publish directory | `products-app/dist` |
 
-Point your domain `react-mf-wp-product-app.yasinates.com` to this site.
+Netlify site name: `react-module-federation-wp-products`
+
+Live URLs:
+- [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app)
+- [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com)
 
 ### 2. Deploy shell-app
 
@@ -93,7 +97,9 @@ In Netlify → **New site from Git** → select this repo:
 | Build command | `npm run build` |
 | Publish directory | `shell-app/dist` |
 
-The shell-app is pre-configured to fetch `ProductList` from `https://react-mf-wp-product-app.yasinates.com` in production — no environment variables needed.
+Live URL: [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com)
+
+The shell-app is pre-configured to fetch `ProductList` from `https://react-module-federation-wp-products.yasinates.com` in production — no environment variables needed.
 
 ## Tests
 

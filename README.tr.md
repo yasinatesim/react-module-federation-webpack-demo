@@ -81,7 +81,11 @@ Netlify → **New site from Git** → bu repoyu seç:
 | Build komutu | `npm run build` |
 | Publish dizini | `products-app/dist` |
 
-`react-mf-wp-product-app.yasinates.com` domainini bu siteye yönlendir.
+Netlify site adı: `react-module-federation-wp-products`
+
+Canlı URL'ler:
+- [https://react-module-federation-wp-products.netlify.app](https://react-module-federation-wp-products.netlify.app)
+- [https://react-module-federation-wp-products.yasinates.com](https://react-module-federation-wp-products.yasinates.com)
 
 ### 2. shell-app'i deploy et
 
@@ -93,7 +97,9 @@ Netlify → **New site from Git** → bu repoyu seç:
 | Build komutu | `npm run build` |
 | Publish dizini | `shell-app/dist` |
 
-shell-app, production'da `ProductList`'i `https://react-mf-wp-product-app.yasinates.com` adresinden çekecek şekilde yapılandırılmıştır — environment variable girmen gerekmez.
+Canlı URL: [https://react-module-federation-wp-shell.yasinates.com](https://react-module-federation-wp-shell.yasinates.com)
+
+shell-app, production'da `ProductList`'i `https://react-module-federation-wp-products.yasinates.com` adresinden çekecek şekilde yapılandırılmıştır — environment variable girmen gerekmez.
 
 ## Testler
 
